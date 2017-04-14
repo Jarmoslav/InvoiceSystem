@@ -6,7 +6,6 @@ import java.util.List;
 public class InvoiceAccount {
 
     private  InvoiceAccountId invoiceAccountId;
-    private  CustomerId customerId;
     private  String description;
     private List<Invoice> invoices;
 
@@ -15,10 +14,6 @@ public class InvoiceAccount {
 
     public InvoiceAccountId getInvoiceAccountId() {
         return invoiceAccountId;
-    }
-
-    public CustomerId getCustomerId() {
-        return customerId;
     }
 
     public String getDescription() {
@@ -50,10 +45,6 @@ public class InvoiceAccount {
             return this;
         }
 
-        public Builder withCustomerId(CustomerId customerId){
-            invoiceAccount.customerId = customerId;
-            return this;
-        }
 
         public Builder withDescription(String description){
             invoiceAccount.description = description;
@@ -72,13 +63,4 @@ public class InvoiceAccount {
 
     }
 
-    @Override
-    public String toString() {
-        return "InvoiceAccount{" +
-                "invoiceAccountId=" + invoiceAccountId +
-                ", customerId=" + customerId +
-                ", description='" + description + '\'' +
-                ", invoices=" + invoices +
-                '}';
-    }
 }

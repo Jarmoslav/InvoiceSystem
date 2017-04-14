@@ -1,11 +1,10 @@
 package main.service;
 
-import main.domain.InvoiceId;
 import main.facade.InvoiceAccountFacade;
-import main.domain.CustomerId;
 import main.domain.InvoiceAccount;
 import main.domain.InvoiceAccountId;
 import main.repository.InvoiceAccountRepository;
+import main.testdata.InvoiceAccountBuilder;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,7 +17,6 @@ import static org.mockito.Mockito.when;
 public class InvoiceAccountServiceImplTest {
 
     private static final InvoiceAccountId INVOICE_ACCOUNT_ID = InvoiceAccountId.valueOf("465");
-    private static final CustomerId CUSTOMER_ID = CustomerId.valueOf("c1");
 
     private InvoiceAccountFacade invoiceAccountFacadeMock;
     private InvoiceAccountServiceImpl invoiceAccountServiceImpl;
@@ -33,11 +31,7 @@ public class InvoiceAccountServiceImplTest {
 
     @Test
     public void createInvoiceAccount() throws Exception {
-        InvoiceAccount invoiceAccount = InvoiceAccount.builder()
-                .withCustomerId(CUSTOMER_ID)
-                .withDescription("invoiceAccount")
-                .withInvoiceAccountId(INVOICE_ACCOUNT_ID)
-                .withInvoices(null)
+        InvoiceAccount invoiceAccount = InvoiceAccountBuilder.anInvoiceAccount()
                 .build();
 
         invoiceAccountServiceImpl.createInvoiceAccount(invoiceAccount);
@@ -48,7 +42,6 @@ public class InvoiceAccountServiceImplTest {
     @Test
     public void getInvoiceAccount() throws Exception {
         InvoiceAccount invoiceAccount = InvoiceAccount.builder()
-                .withCustomerId(CUSTOMER_ID)
                 .withDescription("invoiceAccount")
                 .withInvoiceAccountId(INVOICE_ACCOUNT_ID)
                 .withInvoices(null)

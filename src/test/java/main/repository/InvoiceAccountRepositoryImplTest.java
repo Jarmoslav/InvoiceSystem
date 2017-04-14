@@ -1,18 +1,14 @@
 package main.repository;
 
-import main.domain.CustomerId;
-import main.domain.Invoice;
 import main.domain.InvoiceAccount;
 import main.domain.InvoiceAccountId;
-import org.hamcrest.Matcher;
-import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Collections;
-
+import static main.testdata.InvoiceAccountBuilder.anInvoiceAccount;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThat;
 
 
 public class InvoiceAccountRepositoryImplTest {
@@ -26,17 +22,11 @@ public class InvoiceAccountRepositoryImplTest {
 
     @Test
     public void createAndGetInvoiceAccount() throws Exception {
-        InvoiceAccountId invoiceAccountId = InvoiceAccountId.generate();
-        InvoiceAccount invoiceAccount = InvoiceAccount.builder()
-                .withCustomerId(CustomerId.generate())
-                .withInvoiceAccountId(invoiceAccountId)
-                .withDescription("name")
-                .withInvoices(Collections.<Invoice>emptyList())
+        InvoiceAccount invoiceAccount = anInvoiceAccount()
                 .build();
-
         invoiceAccountRepositoryImpl.createInvoiceAccount(invoiceAccount);
 
-        InvoiceAccount actual = invoiceAccountRepositoryImpl.getInvoiceAccount(invoiceAccountId);
+        InvoiceAccount actual = invoiceAccountRepositoryImpl.getInvoiceAccount(invoiceAccount.getInvoiceAccountId());
 
         assertThat(actual.getInvoiceAccountId(), is(invoiceAccount.getInvoiceAccountId()));
         assertThat(actual, is(invoiceAccount));

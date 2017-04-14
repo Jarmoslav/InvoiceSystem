@@ -1,17 +1,13 @@
 package main.rules;
 
 import main.domain.Invoice;
-import main.domain.InvoiceAccountId;
-import main.domain.InvoiceId;
-import main.domain.InvoiceRow;
 import org.junit.Test;
 
 import java.time.LocalDate;
-import java.util.Collections;
-import java.util.Set;
 
 import static main.testdata.InvoiceBuilder.anInvoice;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by simjar on 2017-04-14.

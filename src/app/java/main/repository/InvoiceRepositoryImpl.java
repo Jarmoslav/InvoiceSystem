@@ -4,11 +4,10 @@ package main.repository;
 import main.domain.Invoice;
 import main.domain.InvoiceAccountId;
 import main.domain.InvoiceId;
+
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class InvoiceRepositoryImpl implements InvoiceRepository {
@@ -24,11 +23,6 @@ public class InvoiceRepositoryImpl implements InvoiceRepository {
     public Invoice getInvoice(InvoiceId invoiceId)  {
         return inMemoryRepository.get(invoiceId);
 
-    }
-
-    @Override
-    public void updateInvoice(Invoice invoice) {
-        inMemoryRepository.put(invoice.getInvoiceId(), invoice);
     }
 
     @Override

@@ -16,7 +16,6 @@ public class InvoiceAccountRepositoryImpl implements InvoiceAccountRepository {
     }
 
     public InvoiceAccount getInvoiceAccount(InvoiceAccountId invoiceAccountId) {
-        System.out.println("reeepo");
         return inMemoryRepository.get(invoiceAccountId);
     }
 }

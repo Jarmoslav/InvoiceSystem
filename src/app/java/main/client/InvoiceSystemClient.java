@@ -42,12 +42,11 @@ public class InvoiceSystemClient {
         System.out.println("2: Invoice");
         System.out.println("3: List all Invoices passed due date");
 
-
         try{
             int nr = scanner.nextInt();
             if(nr==1){
                 System.out.println("1: create InvoiceAccount: " );
-                System.out.println("2: get InvoiceAccount (2): ");
+                System.out.println("2: get InvoiceAccount: ");
                 int invoice = scanner.nextInt();
                 invoiceAccount(invoice);
             }else if(nr==2){
@@ -257,8 +256,7 @@ public class InvoiceSystemClient {
             System.out.print("2 : go back to invoice:");
             inviceRow= scanner.nextInt();
         }
-        System.out.println("invoices rows");
-        System.out.println(invoiceRows);
+
         return invoiceRows;
     }
 
@@ -276,16 +274,15 @@ public class InvoiceSystemClient {
 
     private void createInvoiceAccount() {
         try {
-            System.out.println("create customer id: ");
-            String customerId = scanner.next();
+            System.out.println("create invoiceAccountId(customer id): ");
+            String invoiceAccountId = scanner.next();
 
             System.out.print("create invoice description id: ");
             String description = scanner.next();
 
-            InvoiceAccountId invoiceAccountId = InvoiceAccountId.generate();
+            InvoiceAccountId id = InvoiceAccountId.valueOf(invoiceAccountId);
             InvoiceAccount invoiceAccount = InvoiceAccount.builder()
-                    .withCustomerId(CustomerId.valueOf(customerId))
-                    .withInvoiceAccountId(invoiceAccountId)
+                    .withInvoiceAccountId(id)
                     .withDescription(description)
                     .withInvoices(Collections.<Invoice>emptyList())
                     .build();

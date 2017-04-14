@@ -13,8 +13,6 @@ public interface InvoiceRepository {
 
     Invoice getInvoice(InvoiceId invoiceId);
 
-    void updateInvoice(Invoice invoiceId);
-
     void deleteInvoice(InvoiceId invoiceId);
 
     Set<Invoice> getInvoices(InvoiceAccountId id);

@@ -71,11 +71,11 @@ public class InvoiceFacadeImplTest {
     @Test
     public void getInvoices()  {
         Invoice invoice = anInvoice().build();
-        when(invoiceServiceMock.getInvoices(INVOICE_ACCOUNT_ID)).thenReturn(Collections.singleton(invoice));
+        when(invoiceServiceMock.getInvoices(invoice.getInvoiceAccountId())).thenReturn(Collections.singleton(invoice));
 
-        Set<Invoice> invoices = invoiceFacadeImpl.getInvoices(INVOICE_ACCOUNT_ID);
+        Set<Invoice> invoices = invoiceFacadeImpl.getInvoices(invoice.getInvoiceAccountId());
 
-        verify(invoiceServiceMock).getInvoices(INVOICE_ACCOUNT_ID);
+        verify(invoiceServiceMock).getInvoices(invoice.getInvoiceAccountId());
         assertThat(invoices.size(), is(1));
         assertThat(invoices, contains(invoice));
     }
@@ -85,17 +85,17 @@ public class InvoiceFacadeImplTest {
         LocalDate localDatePassed =LocalDate.of(2015,10,2);
         LocalDate localDateNotPassed =LocalDate.of(2017,10,2);
         Invoice invoicePassed  = anInvoice().withDueDate(localDatePassed).build();
-        /*Invoice invoiceNotPassed =  anInvoice().withDueDate(localDateNotPassed).build();
+        Invoice invoiceNotPassed =  anInvoice().withDueDate(localDateNotPassed).build();
         Set<Invoice> invoices = new HashSet<>();
         invoices.add(invoicePassed);
         invoices.add(invoiceNotPassed);
-*/
-        /*when(invoiceServiceMock.getAllInvoices()).thenReturn(invoices);
+
+        when(invoiceServiceMock.getAllInvoices()).thenReturn(invoices);
         Set<Invoice> allPassedDueInvoices = invoiceFacadeImpl.getAllPassedDueInvoices();
 
         verify(invoiceServiceMock).getAllInvoices();
         assertThat(allPassedDueInvoices.size(), is(1));
-        assertThat(allPassedDueInvoices, contains(invoicePassed));*/
+        assertThat(allPassedDueInvoices, contains(invoicePassed));
     }
 
 }

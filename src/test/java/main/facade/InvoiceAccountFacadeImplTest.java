@@ -1,9 +1,7 @@
 package main.facade;
 
-import main.domain.CustomerId;
 import main.domain.InvoiceAccount;
 import main.domain.InvoiceAccountId;
-import main.repository.InvoiceAccountRepository;
 import main.service.InvoiceAccountService;
 import main.testdata.InvoiceAccountBuilder;
 import org.junit.Before;
@@ -16,7 +14,6 @@ import static org.mockito.Mockito.mock;
 public class InvoiceAccountFacadeImplTest {
 
     private static final InvoiceAccountId INVOICE_ACCOUNT_ID = InvoiceAccountId.valueOf("465");
-    private static final CustomerId CUSTOMER_ID = CustomerId.valueOf("c1");
 
     private InvoiceAccountFacadeImpl invoiceAccountFacadeImpl;
     private InvoiceAccountService invoiceAccountServiceMock;
