@@ -1,5 +1,6 @@
 package main.service;
 
+import main.domain.InvoiceId;
 import main.facade.InvoiceAccountFacade;
 import main.domain.CustomerId;
 import main.domain.InvoiceAccount;
@@ -16,6 +17,9 @@ import static org.mockito.Mockito.when;
 
 public class InvoiceAccountServiceImplTest {
 
+    private static final InvoiceAccountId INVOICE_ACCOUNT_ID = InvoiceAccountId.valueOf("465");
+    private static final CustomerId CUSTOMER_ID = CustomerId.valueOf("c1");
+
     private InvoiceAccountFacade invoiceAccountFacadeMock;
     private InvoiceAccountServiceImpl invoiceAccountServiceImpl;
     private InvoiceAccountRepository invoiceAccountRepositoryMock;
@@ -30,9 +34,9 @@ public class InvoiceAccountServiceImplTest {
     @Test
     public void createInvoiceAccount() throws Exception {
         InvoiceAccount invoiceAccount = InvoiceAccount.builder()
-                .withCustomerId(CustomerId.valueOf("c1"))
+                .withCustomerId(CUSTOMER_ID)
                 .withDescription("invoiceAccount")
-                .withInvoiceAccountId(InvoiceAccountId.generate())
+                .withInvoiceAccountId(INVOICE_ACCOUNT_ID)
                 .withInvoices(null)
                 .build();
 
@@ -43,17 +47,16 @@ public class InvoiceAccountServiceImplTest {
 
     @Test
     public void getInvoiceAccount() throws Exception {
-        InvoiceAccountId invoiceId = InvoiceAccountId.valueOf("invoiceA1");
         InvoiceAccount invoiceAccount = InvoiceAccount.builder()
-                .withCustomerId(CustomerId.valueOf("c1"))
+                .withCustomerId(CUSTOMER_ID)
                 .withDescription("invoiceAccount")
-                .withInvoiceAccountId(invoiceId)
+                .withInvoiceAccountId(INVOICE_ACCOUNT_ID)
                 .withInvoices(null)
                 .build();
 
-        when(invoiceAccountRepositoryMock.getInvoiceAccount(invoiceId)).thenReturn(invoiceAccount);
+        when(invoiceAccountRepositoryMock.getInvoiceAccount(INVOICE_ACCOUNT_ID)).thenReturn(invoiceAccount);
 
-        InvoiceAccount invoiceAccount1= invoiceAccountServiceImpl.getInvoiceAccount(invoiceId);
+        InvoiceAccount invoiceAccount1= invoiceAccountServiceImpl.getInvoiceAccount(INVOICE_ACCOUNT_ID);
         Assert.assertThat(invoiceAccount1, Matchers.is(invoiceAccount));
     }
 

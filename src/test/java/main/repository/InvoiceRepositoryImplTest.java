@@ -4,6 +4,7 @@ import main.domain.Invoice;
 import main.domain.InvoiceAccountId;
 import main.domain.InvoiceId;
 import main.domain.InvoiceRow;
+import main.testdata.InvoiceBuilder;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Before;
@@ -14,6 +15,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Set;
 
+import static main.testdata.InvoiceBuilder.anInvoice;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
@@ -30,22 +32,18 @@ public class InvoiceRepositoryImplTest {
 
     @Test
     public void createInvoice() throws Exception {
-        InvoiceRow row = new InvoiceRow(10.0, "row1");
-        Set<InvoiceRow> invoiceRows = Collections.singleton(row);
-        Invoice invoice = new Invoice(InvoiceId.generate(), InvoiceAccountId.generate(), invoiceRows, LocalDate.now());
-
+        Invoice invoice = anInvoice().build();
         invoiceRepositoryImpl.createInvoice(invoice);
 
-        Invoice invoice1 = invoiceRepositoryImpl.getInvoice(invoice.getInvoiceId());
-        assertThat(invoice1.getInvoiceId(), is(invoice.getInvoiceId()));
-        assertThat(invoice1.getInvoiceRows(), is(invoiceRows));
+        Invoice actual = invoiceRepositoryImpl.getInvoice(invoice.getInvoiceId());
+
+        assertThat(actual.getInvoiceId(), is(invoice.getInvoiceId()));
+        assertThat(actual.getInvoiceRows(), is(invoice.getInvoiceRows()));
     }
 
     @Test
     public void getInvoice() throws Exception {
-        InvoiceRow row = new InvoiceRow(10.0, "row1");
-        Set<InvoiceRow> invoiceRows = Collections.singleton(row);
-        Invoice invoice = new Invoice(InvoiceId.generate(), InvoiceAccountId.generate(), invoiceRows, LocalDate.now());
+        Invoice invoice = anInvoice().build();
 
         Invoice actual = invoiceRepositoryImpl.getInvoice(invoice.getInvoiceId());
 
@@ -53,32 +51,22 @@ public class InvoiceRepositoryImplTest {
     }
 
     @Test
-    public void updateInvoice() throws Exception {
-
-    }
-
-    @Test
     public void deleteInvoice() {
-        InvoiceRow row = new InvoiceRow(10.0, "row1");
-        Set<InvoiceRow> invoiceRows = Collections.singleton(row);
-        Invoice invoice = new Invoice(InvoiceId.generate(), InvoiceAccountId.generate(), invoiceRows, LocalDate.now());
+        Invoice invoice = anInvoice().build();
         invoiceRepositoryImpl.createInvoice(invoice);
+
         invoiceRepositoryImpl.deleteInvoice(invoice.getInvoiceId());
 
         Invoice invoice1 = invoiceRepositoryImpl.getInvoice(invoice.getInvoiceId());
-
         assertNull(invoice1);
     }
 
     @Test
     public void getInvoices(){
-        InvoiceAccountId invoiceAccountId = InvoiceAccountId.valueOf("123");
-        InvoiceRow row = new InvoiceRow(10.0, "row1");
-        Set<InvoiceRow> invoiceRows = Collections.singleton(row);
-        Invoice invoice = new Invoice(InvoiceId.generate(), invoiceAccountId, invoiceRows, LocalDate.now());
+        Invoice invoice = anInvoice().build();
         invoiceRepositoryImpl.createInvoice(invoice);
 
-        Set<Invoice> invoices = invoiceRepositoryImpl.getInvoices(invoiceAccountId);
+        Set<Invoice> invoices = invoiceRepositoryImpl.getInvoices(invoice.getInvoiceAccountId());
 
         assertThat(invoices.size(), is(1));
         assertThat(invoices, contains(invoice));
@@ -95,10 +83,7 @@ public class InvoiceRepositoryImplTest {
 
     @Test
     public void getAllInvoices(){
-        InvoiceRow row = new InvoiceRow(10.0, "row1");
-        Set<InvoiceRow> invoiceRows = Collections.singleton(row);
-        Invoice invoice = new Invoice(InvoiceId.generate(), InvoiceAccountId.generate(), invoiceRows, LocalDate.now());
-
+        Invoice invoice =  anInvoice().build();
         invoiceRepositoryImpl.createInvoice(invoice);
 
         Set<Invoice> invoices = invoiceRepositoryImpl.getAllInvoices();

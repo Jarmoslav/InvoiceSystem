@@ -37,10 +37,10 @@ public class InvoiceAccount {
 
         private final InvoiceAccount invoiceAccount;
 
-
         private Builder() {
             this.invoiceAccount = new InvoiceAccount();
         }
+
         public static Builder builder(){
             return new Builder();
         }

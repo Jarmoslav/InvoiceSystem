@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.util.Collections;
 import java.util.Set;
 
+import static main.testdata.InvoiceBuilder.anInvoice;
 import static org.junit.Assert.*;
 
 /**
@@ -19,9 +20,7 @@ public class BusinessRulesTest {
 
     @Test
     public void ifPassedDueHasPassedShouldReturnTrue() throws Exception {
-        InvoiceRow row = new InvoiceRow(10.0, "row1");
-        Set<InvoiceRow> invoiceRows = Collections.singleton(row);
-        Invoice invoice = new Invoice(InvoiceId.generate(), InvoiceAccountId.generate(), invoiceRows, LocalDate.of(2017,3,14));
+        Invoice invoice = anInvoice().withDueDate(LocalDate.of(2017,3,14)).build();
         BusinessRules businessRules = new BusinessRules();
 
         boolean passedDue = businessRules.isPassedDue(invoice);
@@ -31,9 +30,7 @@ public class BusinessRulesTest {
 
     @Test
     public void ifInvoiceHasNotPassedDueShouldReturnFalse() throws Exception {
-        InvoiceRow row = new InvoiceRow(10.0, "row1");
-        Set<InvoiceRow> invoiceRows = Collections.singleton(row);
-        Invoice invoice = new Invoice(InvoiceId.generate(), InvoiceAccountId.generate(), invoiceRows, LocalDate.now());
+        Invoice invoice =  anInvoice().withDueDate(LocalDate.now()).build();
         BusinessRules businessRules = new BusinessRules();
 
         boolean passedDue = businessRules.isPassedDue(invoice);

@@ -8,19 +8,13 @@ import java.util.Set;
 
 public class Invoice {
 
-    private final InvoiceId invoiceId;
-    private final InvoiceAccountId invoiceAccountId;
+    private InvoiceId invoiceId;
+    private InvoiceAccountId invoiceAccountId;
     private Set<InvoiceRow> invoiceRows;
-    private final LocalDate localDate;
+    private LocalDate dueDate;
 
-
-    public Invoice(InvoiceId invoiceId, InvoiceAccountId invoiceAccountId, Set<InvoiceRow> invoiceRows, LocalDate dueDate) {
-        this.invoiceId = invoiceId;
-        this.invoiceAccountId = invoiceAccountId;
-        this.localDate = dueDate;
-        this.invoiceRows = invoiceRows;
-
-
+    private Invoice() {
+        // Empty
     }
 
     public InvoiceId getInvoiceId() {
@@ -35,16 +29,54 @@ public class Invoice {
         return invoiceRows;
     }
 
-    public LocalDate getLocalDate() {
-        return localDate;
+    public LocalDate getDueDate() {
+        return dueDate;
     }
 
-    public Double getDebt(){
+    public Double getDebt() {
         return invoiceRows.stream().mapToDouble(InvoiceRow::getAmount).sum();
     }
 
-    public boolean isPassedDue(){
+    public boolean isPassedDue() {
         return BusinessRules.isPassedDue(this);
+    }
+
+    public static class Builder {
+
+        private final Invoice invoice;
+
+        private Builder() {
+            this.invoice = new Invoice();
+        }
+
+        public static Builder anInvoice(){
+            return new Builder();
+        }
+
+        public Builder withInvoiceId(InvoiceId invoiceId){
+            invoice.invoiceId = invoiceId;
+            return this;
+        }
+
+        public Builder withInvoiceAccountId(InvoiceAccountId invoiceAccountId){
+            invoice.invoiceAccountId = invoiceAccountId;
+            return this;
+        }
+
+        public Builder withInvoiceRows(Set<InvoiceRow> invoiceRows){
+            invoice.invoiceRows = invoiceRows;
+            return this;
+        }
+
+        public Builder withDueDate(LocalDate dueDate){
+            invoice.dueDate = dueDate;
+            return this;
+        }
+
+        public Invoice build(){
+            return invoice;
+        }
+
     }
 
     @Override
@@ -67,7 +99,7 @@ public class Invoice {
         if (invoiceAccountId != null ? !invoiceAccountId.equals(invoice.invoiceAccountId) : invoice.invoiceAccountId != null)
             return false;
         if (invoiceRows != null ? !invoiceRows.equals(invoice.invoiceRows) : invoice.invoiceRows != null) return false;
-        return localDate != null ? localDate.equals(invoice.localDate) : invoice.localDate == null;
+        return dueDate != null ? dueDate.equals(invoice.dueDate) : invoice.dueDate == null;
     }
 
     @Override
@@ -75,7 +107,7 @@ public class Invoice {
         int result = invoiceId != null ? invoiceId.hashCode() : 0;
         result = 31 * result + (invoiceAccountId != null ? invoiceAccountId.hashCode() : 0);
         result = 31 * result + (invoiceRows != null ? invoiceRows.hashCode() : 0);
-        result = 31 * result + (localDate != null ? localDate.hashCode() : 0);
+        result = 31 * result + (dueDate != null ? dueDate.hashCode() : 0);
         return result;
     }
 }

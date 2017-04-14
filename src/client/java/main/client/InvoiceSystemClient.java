@@ -10,6 +10,8 @@ import main.facade.InvoiceFacadeImpl;
 import java.time.LocalDate;
 import java.util.*;
 
+import static main.domain.Invoice.Builder.anInvoice;
+
 public class InvoiceSystemClient {
 
     Scanner scanner = new Scanner(System.in);
@@ -134,7 +136,7 @@ public class InvoiceSystemClient {
             System.out.println("--------Invoice----");
             System.out.println("Invoice Id: " + invoice.getInvoiceAccountId());
             System.out.println("debt: " + invoice.getDebt());
-            System.out.println("dueDate " + invoice.getLocalDate());
+            System.out.println("dueDate " + invoice.getDueDate());
             System.out.println("dueDate has passed ?:"+ invoice.isPassedDue());
             printInvoiceRow(invoice.getInvoiceRows());
             System.out.println("------------------");
@@ -167,16 +169,28 @@ public class InvoiceSystemClient {
             System.out.println("day: ");
             int day =scanner.nextInt();
 
-            LocalDate localDate = LocalDate.of(year, month, day);
+            LocalDate dueDate = LocalDate.of(year, month, day);
 
             System.out.println("1 : add new invoice rows:");
             int inviceRow= scanner.nextInt();
             Invoice invoice1;
 
             if(inviceRow==1){
-                 invoice1 = new Invoice(InvoiceId.generate(), invoiceAccountId1, createInvoiceRows(), localDate);
+                 invoice1 =  anInvoice()
+                         .withInvoiceId(InvoiceId.generate())
+                         .withInvoiceAccountId(invoiceAccountId1)
+                         .withInvoiceRows(createInvoiceRows())
+                         .withDueDate(dueDate)
+                         .build();
             }else{
-                 invoice1 = new Invoice(InvoiceId.generate(), invoiceAccountId1, Collections.emptySet(), LocalDate.now());
+                invoice1 = anInvoice()
+                        .withInvoiceId(InvoiceId.generate())
+                        .withInvoiceAccountId(invoiceAccountId1)
+                        .withInvoiceRows(Collections.emptySet())
+                        .withDueDate( LocalDate.now())
+                        .build();
+
+
             }
             System.out.println(invoice1);
 
