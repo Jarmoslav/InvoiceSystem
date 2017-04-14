@@ -6,6 +6,7 @@ import main.domain.InvoiceId;
 import main.service.InvoiceService;
 import main.service.InvoiceServiceImpl;
 
+import java.util.Collections;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -36,11 +37,6 @@ public class InvoiceFacadeImpl implements InvoiceFacade {
     }
 
     @Override
-    public void updateInvoice(Invoice invoice) {
-        invoiceService.updateInvoice(invoice);
-    }
-
-    @Override
     public void deleteInvoice(InvoiceId invoiceId) {
         invoiceService.deleteInvoice(invoiceId);
     }
@@ -52,9 +48,15 @@ public class InvoiceFacadeImpl implements InvoiceFacade {
 
     @Override
     public Set<Invoice> getAllPassedDueInvoices() {
-        return invoiceService.getAllInvoices().stream()
+        Set<Invoice> invoices = invoiceService.getAllInvoices().stream()
                 .filter(Invoice::isPassedDue)
                 .collect(Collectors.toSet());
+        if(invoices==null){
+            return Collections.emptySet();
+        }
+        else {
+            return invoices;
+        }
     }
 
 

@@ -13,8 +13,6 @@ public interface InvoiceService {
 
     Invoice getInvoice(InvoiceId invoiceId);
 
-    void updateInvoice(Invoice invoice);
-
     void deleteInvoice(InvoiceId invoiceId);
 
     Set<Invoice> getInvoices(InvoiceAccountId id);

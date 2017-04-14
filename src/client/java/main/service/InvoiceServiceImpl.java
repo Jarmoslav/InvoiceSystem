@@ -33,11 +33,6 @@ public class InvoiceServiceImpl implements InvoiceService {
     }
 
     @Override
-    public void updateInvoice(Invoice invoice) {
-        invoiceRepository.updateInvoice(invoice);
-    }
-
-    @Override
     public void deleteInvoice(InvoiceId invoiceId) {
         invoiceRepository.deleteInvoice(invoiceId);
     }
