@@ -36,8 +36,6 @@ public class InvoiceAccountServiceImplTest {
                 .withInvoices(null)
                 .build();
 
-        System.out.println(invoiceAccount);
-
         invoiceAccountServiceImpl.createInvoiceAccount(invoiceAccount);
 
         Mockito.verify(invoiceAccountRepositoryMock).createInvoiceAccount(invoiceAccount);
@@ -52,10 +50,10 @@ public class InvoiceAccountServiceImplTest {
                 .withInvoiceAccountId(invoiceId)
                 .withInvoices(null)
                 .build();
+
         when(invoiceAccountRepositoryMock.getInvoiceAccount(invoiceId)).thenReturn(invoiceAccount);
 
         InvoiceAccount invoiceAccount1= invoiceAccountServiceImpl.getInvoiceAccount(invoiceId);
-
         Assert.assertThat(invoiceAccount1, Matchers.is(invoiceAccount));
     }
 

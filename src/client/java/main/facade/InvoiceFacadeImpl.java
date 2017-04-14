@@ -1,9 +1,13 @@
 package main.facade;
 
 import main.domain.Invoice;
+import main.domain.InvoiceAccountId;
 import main.domain.InvoiceId;
 import main.service.InvoiceService;
 import main.service.InvoiceServiceImpl;
+
+import java.util.Set;
+import java.util.stream.Collectors;
 
 
 public class InvoiceFacadeImpl implements InvoiceFacade {
@@ -21,15 +25,37 @@ public class InvoiceFacadeImpl implements InvoiceFacade {
     }
 
 
+    @Override
     public void createInvoice(Invoice invoice) {
         invoiceService.createInvoice(invoice);
     }
 
+    @Override
     public Invoice getInvoice(InvoiceId invoiceId) {
         return invoiceService.getInvoice(invoiceId);
     }
 
+    @Override
     public void updateInvoice(Invoice invoice) {
         invoiceService.updateInvoice(invoice);
     }
+
+    @Override
+    public void deleteInvoice(InvoiceId invoiceId) {
+        invoiceService.deleteInvoice(invoiceId);
+    }
+
+    @Override
+    public Set<Invoice> getInvoices(InvoiceAccountId id) {
+        return  invoiceService.getInvoices(id);
+    }
+
+    @Override
+    public Set<Invoice> getAllPassedDueInvoices() {
+        return invoiceService.getAllInvoices().stream()
+                .filter(Invoice::isPassedDue)
+                .collect(Collectors.toSet());
+    }
+
+
 }

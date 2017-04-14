@@ -2,7 +2,10 @@ package main.repository;
 
 
 import main.domain.Invoice;
+import main.domain.InvoiceAccountId;
 import main.domain.InvoiceId;
+
+import java.util.Set;
 
 public interface InvoiceRepository {
 
@@ -11,4 +14,11 @@ public interface InvoiceRepository {
     Invoice getInvoice(InvoiceId invoiceId);
 
     void updateInvoice(Invoice invoiceId);
+
+    void deleteInvoice(InvoiceId invoiceId);
+
+    Set<Invoice> getInvoices(InvoiceAccountId id);
+
+    Set<Invoice> getAllInvoices();
+
 }

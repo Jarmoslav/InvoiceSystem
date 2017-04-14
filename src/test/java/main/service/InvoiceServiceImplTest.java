@@ -12,7 +12,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+import java.time.LocalDate;
 import java.util.Collections;
+import java.util.Date;
 
 
 public class InvoiceServiceImplTest {
@@ -30,7 +32,7 @@ public class InvoiceServiceImplTest {
 
     @Test
     public void createInvoice() throws Exception {
-        Invoice invoice = new Invoice(InvoiceId.generate(), InvoiceAccountId.generate(), Collections.<InvoiceRow>emptySet());
+        Invoice invoice = new Invoice(InvoiceId.generate(), InvoiceAccountId.generate(), Collections.<InvoiceRow>emptySet(), LocalDate.now());
 
         invoiceServiceImpl.createInvoice(invoice);
 
@@ -40,7 +42,7 @@ public class InvoiceServiceImplTest {
     @Test
     public void getInvoice() throws Exception {
         InvoiceId invoiceId = InvoiceId.generate();
-        Invoice invoice = new Invoice(invoiceId, InvoiceAccountId.generate(), Collections.<InvoiceRow>emptySet());
+        Invoice invoice = new Invoice(invoiceId, InvoiceAccountId.generate(), Collections.<InvoiceRow>emptySet(), LocalDate.now());
         Mockito.when(invoiceRepositoryMock.getInvoice(invoiceId)).thenReturn(invoice);
 
         Invoice invoice1 = invoiceServiceImpl.getInvoice(invoiceId);

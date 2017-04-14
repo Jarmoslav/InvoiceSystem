@@ -1,9 +1,12 @@
 package main.service;
 
 import main.domain.Invoice;
+import main.domain.InvoiceAccountId;
 import main.domain.InvoiceId;
 import main.repository.InvoiceRepository;
 import main.repository.InvoiceRepositoryImpl;
+
+import java.util.Set;
 
 
 public class InvoiceServiceImpl implements InvoiceService {
@@ -19,15 +22,33 @@ public class InvoiceServiceImpl implements InvoiceService {
         this.invoiceRepository = invoiceRepository;
     }
 
+    @Override
     public void createInvoice(Invoice invoice) {
         invoiceRepository.createInvoice(invoice);
     }
 
+    @Override
     public Invoice getInvoice(InvoiceId invoiceId) {
         return invoiceRepository.getInvoice(invoiceId);
     }
 
+    @Override
     public void updateInvoice(Invoice invoice) {
         invoiceRepository.updateInvoice(invoice);
+    }
+
+    @Override
+    public void deleteInvoice(InvoiceId invoiceId) {
+        invoiceRepository.deleteInvoice(invoiceId);
+    }
+
+    @Override
+    public Set<Invoice> getInvoices(InvoiceAccountId id) {
+        return invoiceRepository.getInvoices(id);
+    }
+
+    @Override
+    public Set<Invoice> getAllInvoices() {
+        return invoiceRepository.getAllInvoices();
     }
 }
