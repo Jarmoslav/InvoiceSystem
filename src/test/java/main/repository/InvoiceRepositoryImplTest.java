@@ -1,18 +1,12 @@
 package main.repository;
 
-import main.domain.Invoice;
-import main.domain.InvoiceAccountId;
-import main.domain.InvoiceId;
-import main.domain.InvoiceRow;
-import main.testdata.InvoiceBuilder;
+import api.domain.Invoice;
+import api.domain.InvoiceAccountId;
 import org.hamcrest.Matchers;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import repository.InvoiceRepositoryImpl;
 
-import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Set;
 
 import static main.testdata.InvoiceBuilder.anInvoice;

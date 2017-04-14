@@ -1,11 +1,10 @@
 package main.facade;
 
-import main.domain.Invoice;
-import main.domain.InvoiceAccountId;
-import main.domain.InvoiceId;
-import main.domain.InvoiceRow;
-import main.service.InvoiceService;
-import main.testdata.InvoiceBuilder;
+import api.domain.Invoice;
+import api.domain.InvoiceAccountId;
+import api.domain.InvoiceId;
+import api.service.InvoiceService;
+import client.client.facade.InvoiceFacadeImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

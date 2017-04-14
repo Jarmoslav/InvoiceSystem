@@ -1,9 +1,9 @@
 package main.testdata;
 
 
-import main.domain.Invoice;
-import main.domain.InvoiceAccount;
-import main.domain.InvoiceAccountId;
+import api.domain.Invoice;
+import api.domain.InvoiceAccount;
+import api.domain.InvoiceAccountId;
 
 import java.util.Collections;
 

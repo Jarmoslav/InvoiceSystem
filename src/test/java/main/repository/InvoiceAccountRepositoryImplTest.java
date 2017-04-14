@@ -1,9 +1,10 @@
 package main.repository;
 
-import main.domain.InvoiceAccount;
-import main.domain.InvoiceAccountId;
+import api.domain.InvoiceAccount;
+import api.domain.InvoiceAccountId;
 import org.junit.Before;
 import org.junit.Test;
+import repository.InvoiceAccountRepositoryImpl;
 
 import static main.testdata.InvoiceAccountBuilder.anInvoiceAccount;
 import static org.hamcrest.Matchers.is;

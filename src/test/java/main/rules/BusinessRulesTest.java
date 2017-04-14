@@ -1,6 +1,7 @@
 package main.rules;
 
-import main.domain.Invoice;
+import api.domain.Invoice;
+import client.client.rules.BusinessRules;
 import org.junit.Test;
 
 import java.time.LocalDate;

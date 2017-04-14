@@ -1,10 +1,10 @@
 package main.testdata;
 
 
-import main.domain.Invoice;
-import main.domain.InvoiceAccountId;
-import main.domain.InvoiceId;
-import main.domain.InvoiceRow;
+import api.domain.Invoice;
+import api.domain.InvoiceAccountId;
+import api.domain.InvoiceId;
+import api.domain.InvoiceRow;
 
 import java.time.LocalDate;
 import java.util.Collections;

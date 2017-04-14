@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d312483-aa76-4aad-8a24-04decca43b76" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/java/main/domain/CustomerId.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/client/InvoiceSystemClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/domain/CustomerId.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/domain/Invoice.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/domain/InvoiceAccount$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/domain/InvoiceAccount$Builder.class" afterPath="" />
@@ -14,51 +10,56 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/domain/InvoiceId.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/domain/InvoiceRow.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/domain/InvoiceRowId.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/facade/InvoiceAccountFacade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/facade/InvoiceAccountFacadeImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/facade/InvoiceFacade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/facade/InvoiceFacadeImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/repository/InvoiceAccountRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/repository/InvoiceAccountRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/repository/InvoiceRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/repository/InvoiceRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/rules/BusinessRules.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/service/InvoiceAccountService.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/service/InvoiceAccountServiceImpl.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/service/InvoiceService.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/main/service/InvoiceServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/main/repository/InvoiceAccountRepositoryImplTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/main/repository/InvoiceRepositoryImplTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/main/rules/BusinessRulesTest.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/main/service/InvoiceAccountServiceImplTest.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/main/service/InvoiceServiceImplTest.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/Main.java" afterPath="$PROJECT_DIR$/src/app/java/main/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/client/InvoiceSystemClient.java" afterPath="$PROJECT_DIR$/src/app/java/main/client/InvoiceSystemClient.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/domain/Invoice.java" afterPath="$PROJECT_DIR$/src/app/java/main/domain/Invoice.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/domain/InvoiceAccount.java" afterPath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceAccount.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/domain/InvoiceAccountId.java" afterPath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceAccountId.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/domain/InvoiceId.java" afterPath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceId.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/domain/InvoiceRow.java" afterPath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceRow.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/domain/InvoiceRowId.java" afterPath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceRowId.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/facade/InvoiceAccountFacade.java" afterPath="$PROJECT_DIR$/src/app/java/main/facade/InvoiceAccountFacade.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/facade/InvoiceAccountFacadeImpl.java" afterPath="$PROJECT_DIR$/src/app/java/main/facade/InvoiceAccountFacadeImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/facade/InvoiceFacade.java" afterPath="$PROJECT_DIR$/src/app/java/main/facade/InvoiceFacade.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/facade/InvoiceFacadeImpl.java" afterPath="$PROJECT_DIR$/src/app/java/main/facade/InvoiceFacadeImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/repository/InvoiceAccountRepository.java" afterPath="$PROJECT_DIR$/src/app/java/main/repository/InvoiceAccountRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/repository/InvoiceAccountRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/app/java/main/repository/InvoiceAccountRepositoryImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/repository/InvoiceRepository.java" afterPath="$PROJECT_DIR$/src/app/java/main/repository/InvoiceRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/repository/InvoiceRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/app/java/main/repository/InvoiceRepositoryImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/rules/BusinessRules.java" afterPath="$PROJECT_DIR$/src/app/java/main/rules/BusinessRules.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/service/InvoiceAccountService.java" afterPath="$PROJECT_DIR$/src/app/java/main/service/InvoiceAccountService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/service/InvoiceAccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/app/java/main/service/InvoiceAccountServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/service/InvoiceService.java" afterPath="$PROJECT_DIR$/src/app/java/main/service/InvoiceService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/java/main/service/InvoiceServiceImpl.java" afterPath="$PROJECT_DIR$/src/app/java/main/service/InvoiceServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/Main.java" afterPath="$PROJECT_DIR$/src/app/java/client/Main.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/client/InvoiceSystemClient.java" afterPath="$PROJECT_DIR$/src/app/java/client/client/InvoiceSystemClient.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/domain/Invoice.java" afterPath="$PROJECT_DIR$/src/app/java/api/domain/Invoice.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceAccount.java" afterPath="$PROJECT_DIR$/src/app/java/api/domain/InvoiceAccount.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceAccountId.java" afterPath="$PROJECT_DIR$/src/app/java/api/domain/InvoiceAccountId.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceId.java" afterPath="$PROJECT_DIR$/src/app/java/api/domain/InvoiceId.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceRow.java" afterPath="$PROJECT_DIR$/src/app/java/api/domain/InvoiceRow.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/domain/InvoiceRowId.java" afterPath="$PROJECT_DIR$/src/app/java/api/domain/InvoiceRowId.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/facade/InvoiceAccountFacade.java" afterPath="$PROJECT_DIR$/src/app/java/client/client/facade/InvoiceAccountFacade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/facade/InvoiceAccountFacadeImpl.java" afterPath="$PROJECT_DIR$/src/app/java/client/client/facade/InvoiceAccountFacadeImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/facade/InvoiceFacade.java" afterPath="$PROJECT_DIR$/src/app/java/client/client/facade/InvoiceFacade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/facade/InvoiceFacadeImpl.java" afterPath="$PROJECT_DIR$/src/app/java/client/client/facade/InvoiceFacadeImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/repository/InvoiceAccountRepository.java" afterPath="$PROJECT_DIR$/src/app/java/repository/InvoiceAccountRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/repository/InvoiceAccountRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/app/java/repository/InvoiceAccountRepositoryImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/repository/InvoiceRepository.java" afterPath="$PROJECT_DIR$/src/app/java/repository/InvoiceRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/repository/InvoiceRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/app/java/repository/InvoiceRepositoryImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/rules/BusinessRules.java" afterPath="$PROJECT_DIR$/src/app/java/client/client/rules/BusinessRules.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/service/InvoiceAccountService.java" afterPath="$PROJECT_DIR$/src/app/java/api/service/InvoiceAccountService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/service/InvoiceAccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/app/java/api/service/InvoiceAccountServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/service/InvoiceService.java" afterPath="$PROJECT_DIR$/src/app/java/api/service/InvoiceService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/java/main/service/InvoiceServiceImpl.java" afterPath="$PROJECT_DIR$/src/app/java/api/service/InvoiceServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/main/service/InvoiceAccountServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/api/InvoiceAccountServiceImplTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/main/service/InvoiceServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/api/InvoiceServiceImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/client/InvoiceSystemClient.class" afterPath="$PROJECT_DIR$/target/classes/main/client/InvoiceSystemClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/facade/InvoiceAccountFacade.class" afterPath="$PROJECT_DIR$/target/classes/main/facade/InvoiceAccountFacade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/facade/InvoiceAccountFacadeImpl.class" afterPath="$PROJECT_DIR$/target/classes/main/facade/InvoiceAccountFacadeImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/facade/InvoiceFacade.class" afterPath="$PROJECT_DIR$/target/classes/main/facade/InvoiceFacade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/facade/InvoiceFacadeImpl.class" afterPath="$PROJECT_DIR$/target/classes/main/facade/InvoiceFacadeImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/repository/InvoiceAccountRepository.class" afterPath="$PROJECT_DIR$/target/classes/main/repository/InvoiceAccountRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/repository/InvoiceAccountRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/classes/main/repository/InvoiceAccountRepositoryImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/repository/InvoiceRepository.class" afterPath="$PROJECT_DIR$/target/classes/main/repository/InvoiceRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/repository/InvoiceRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/classes/main/repository/InvoiceRepositoryImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/rules/BusinessRules.class" afterPath="$PROJECT_DIR$/target/classes/main/rules/BusinessRules.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/main/repository/InvoiceAccountRepositoryImplTest.class" afterPath="$PROJECT_DIR$/target/test-classes/main/repository/InvoiceAccountRepositoryImplTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/main/repository/InvoiceRepositoryImplTest.class" afterPath="$PROJECT_DIR$/target/test-classes/main/repository/InvoiceRepositoryImplTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/main/rules/BusinessRulesTest.class" afterPath="$PROJECT_DIR$/target/test-classes/main/rules/BusinessRulesTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/main/facade/InvoiceAccountFacadeImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/main/facade/InvoiceAccountFacadeImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/main/facade/InvoiceFacadeImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/main/facade/InvoiceFacadeImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/main/repository/InvoiceAccountRepositoryImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/main/repository/InvoiceAccountRepositoryImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/main/service/InvoiceAccountServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/main/service/InvoiceAccountServiceImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/main/repository/InvoiceRepositoryImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/main/repository/InvoiceRepositoryImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/main/rules/BusinessRulesTest.java" afterPath="$PROJECT_DIR$/src/test/java/main/rules/BusinessRulesTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/main/testdata/InvoiceAccountBuilder.java" afterPath="$PROJECT_DIR$/src/test/java/main/testdata/InvoiceAccountBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/main/testdata/InvoiceBuilder.java" afterPath="$PROJECT_DIR$/src/test/java/main/testdata/InvoiceBuilder.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +76,7 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="InvoiceSystemClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/java/main/client/InvoiceSystemClient.java">
+        <entry file="file://$PROJECT_DIR$/src/app/java/client/client/InvoiceSystemClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="117">
               <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
@@ -84,44 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvoiceId.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/java/main/domain/InvoiceId.java">
+      <file leaf-file-name="InvoiceRepositoryImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/java/repository/InvoiceRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#111#112#0" expanded="true" />
-                <element signature="e#139#140#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Invoice.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/java/main/domain/Invoice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvoiceRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/java/main/repository/InvoiceRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvoiceRepositoryImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/java/main/repository/InvoiceRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="126">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BusinessRulesTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BusinessRulesTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/main/rules/BusinessRulesTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,41 +109,71 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvoiceFacade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/java/main/facade/InvoiceFacade.java">
+      <file leaf-file-name="InvoiceAccountService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/java/api/service/InvoiceAccountService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="0">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvoiceAccountServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/java/api/service/InvoiceAccountServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvoiceService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/java/api/service/InvoiceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
               <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvoiceFacadeImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/java/main/facade/InvoiceFacadeImpl.java">
+      <file leaf-file-name="InvoiceServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/java/api/service/InvoiceServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+            <state relative-caret-position="75">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvoiceAccount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/java/main/domain/InvoiceAccount.java">
+      <file leaf-file-name="InvoiceAccountRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/java/repository/InvoiceAccountRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="-8">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvoiceAccountId.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/java/main/domain/InvoiceAccountId.java">
+      <file leaf-file-name="InvoiceAccountRepositoryImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/java/repository/InvoiceAccountRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="-8">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvoiceRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/java/repository/InvoiceRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -210,6 +208,8 @@
         <option value="$PROJECT_DIR$/src/client/java/main/repository/InvoiceRepository.java" />
         <option value="$PROJECT_DIR$/src/client/java/main/repository/InvoiceRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/main/rules/BusinessRulesTest.java" />
+        <option value="$PROJECT_DIR$/src/app/java/api/service/InvoiceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/app/java/repository/InvoiceRepositoryImpl.java" />
       </list>
     </option>
   </component>
@@ -288,10 +288,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -332,10 +328,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -351,6 +343,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="api.service" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.All in system">
     <configuration default="false" name="All in system" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -403,7 +400,7 @@
     <configuration default="false" name="InvoiceAccountRepositoryImplTest.createAndGetInvoiceAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="main.repository.*" />
+          <option name="PATTERN" value="repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -1033,7 +1030,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492194402365</updated>
-      <workItem from="1492194406354" duration="1841000" />
+      <workItem from="1492194406354" duration="2375000" />
     </task>
     <servers />
   </component>
@@ -1047,12 +1044,18 @@
     <history-entry file="All_in_system - 2017.04.14 at 20h 54m 54s.xml">
       <configuration name="All in system" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_system - 2017.04.14 at 20h 57m 42s.xml">
+      <configuration name="All in system" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_system - 2017.04.14 at 21h 02m 31s.xml">
+      <configuration name="All in system" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="InvoiceAccountRepositoryImplTest_createAndGetInvoiceAccount - 2017.04.14 at 20h 40m 45s.xml">
       <configuration name="InvoiceAccountRepositoryImplTest.createAndGetInvoiceAccount" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1841000" />
+    <option name="totallyTimeSpent" value="2375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="733" extended-state="6" />
@@ -1061,7 +1064,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1075,6 +1078,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34814218" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1085,7 +1089,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1120,15 +1123,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/repository/InvoiceAccountRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/rules/BusinessRules.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/client/client/rules/BusinessRules.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -1152,7 +1147,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/main/service/InvoiceAccountServiceImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/api/InvoiceAccountServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="33" column="56" lean-forward="false" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
@@ -1176,7 +1171,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/client/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -1184,18 +1179,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/domain/InvoiceId.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/api/domain/InvoiceId.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#139#140#0" expanded="true" />
+            <element signature="e#110#111#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/domain/Invoice.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/api/domain/Invoice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
@@ -1203,15 +1198,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/repository/InvoiceRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/facade/InvoiceFacade.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/client/client/facade/InvoiceFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
@@ -1219,7 +1206,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/facade/InvoiceFacadeImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/client/client/facade/InvoiceFacadeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
@@ -1227,7 +1214,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/domain/InvoiceAccount.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/api/domain/InvoiceAccount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
@@ -1235,7 +1222,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/domain/InvoiceAccountId.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/api/domain/InvoiceAccountId.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
@@ -1243,7 +1230,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/client/InvoiceSystemClient.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/client/client/InvoiceSystemClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
@@ -1251,20 +1238,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/java/main/repository/InvoiceRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/main/rules/BusinessRulesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/main/rules/BusinessRulesTest.java">
+    <entry file="file://$PROJECT_DIR$/src/app/java/api/service/InvoiceAccountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/java/api/service/InvoiceAccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/java/api/service/InvoiceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/java/api/service/InvoiceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/java/repository/InvoiceAccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/java/repository/InvoiceAccountRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/java/repository/InvoiceRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/java/repository/InvoiceRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

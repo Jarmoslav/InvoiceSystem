@@ -1,8 +1,9 @@
 package main.facade;
 
-import main.domain.InvoiceAccount;
-import main.domain.InvoiceAccountId;
-import main.service.InvoiceAccountService;
+import api.domain.InvoiceAccount;
+import api.domain.InvoiceAccountId;
+import api.service.InvoiceAccountService;
+import client.client.facade.InvoiceAccountFacadeImpl;
 import main.testdata.InvoiceAccountBuilder;
 import org.junit.Before;
 import org.junit.Test;
