@@ -126,17 +126,21 @@ public class InvoiceSystemClient {
         System.out.println("1: Invoice By Invoice account Id");
         System.out.println("2: Invoice By Invoice id");
         System.out.println("3: return to previous");
-        int invoice = scanner.nextInt();
-        if(invoice==1){
-            getInvoicesByInvoiceAccount();
+        try {
+            int invoice = scanner.nextInt();
+            if (invoice == 1) {
+                getInvoicesByInvoiceAccount();
 
-        }else if(invoice==2){
-            getInvoiceByInvoiceId();
+            } else if (invoice == 2) {
+                getInvoiceByInvoiceId();
 
-        }else{
-            System.out.println("invaild input, returing to previous");
+            } else {
+                System.out.println("invaild input, returing to previous");
+            }
+        } catch (InputMismatchException e){
+            System.out.println("error");
+            mainGui();
         }
-
         handleInvoice();
     }
 
@@ -202,36 +206,29 @@ public class InvoiceSystemClient {
 
             LocalDate dueDate = LocalDate.of(year, month, day);
 
-            Invoice invoice1 = createInvoice(invoiceAccountId1, dueDate);
-            invoiceFacade.createInvoice(invoice1);
-
+            createInvoice(invoiceAccountId1, dueDate);
         }
 
         handleInvoice();
     }
 
-    private Invoice createInvoice(InvoiceAccountId invoiceAccountId1, LocalDate dueDate) {
+    private void createInvoice(InvoiceAccountId invoiceAccountId1, LocalDate dueDate) {
         System.out.println("1 : add new invoice rows:");
-        System.out.println("2 : go back and create empty rows and due date will be set to todays date");
-        System.out.println("3 : go back ");
+        System.out.println("2 : go back ");
         Invoice invoice;
         try {
             int nr = scanner.nextInt();
 
             if (nr == 1) {
-                return anInvoice()
+                Invoice invoice1 = anInvoice()
                         .withInvoiceId(InvoiceId.generate())
                         .withInvoiceAccountId(invoiceAccountId1)
                         .withInvoiceRows(createInvoiceRows())
                         .withDueDate(dueDate)
                         .build();
-            } else {
-                return anInvoice()
-                        .withInvoiceId(InvoiceId.generate())
-                        .withInvoiceAccountId(invoiceAccountId1)
-                        .withInvoiceRows(Collections.emptySet())
-                        .withDueDate(LocalDate.now())
-                        .build();
+                invoiceFacade.createInvoice(invoice1);
+            }else{
+                handleInvoice();
             }
 
         }catch (InputMismatchException e){
@@ -239,13 +236,6 @@ public class InvoiceSystemClient {
             scanner.next();
             handleInvoice();
         }
-
-        return anInvoice()
-                .withInvoiceId(InvoiceId.generate())
-                .withInvoiceAccountId(invoiceAccountId1)
-                .withInvoiceRows(Collections.emptySet())
-                .withDueDate(LocalDate.now())
-                .build();
 
     }
 
