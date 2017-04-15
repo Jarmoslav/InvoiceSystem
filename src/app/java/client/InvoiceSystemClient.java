@@ -17,8 +17,9 @@ import static api.domain.Invoice.Builder.anInvoice;
 * Speaks with the backend through the facades.
 * This is a naive approch...
 * TODO: Split File into InvoiceClient and InvoiceAccount classes.
-* TODO: Find libary for better terminal handling
+* TODO: Find libary for better terminal handling, or create a rest service with a controller.
 * TODO: Support Payment of for invoices.
+* TODO: Better exeception handling
 * */
 public class InvoiceSystemClient {
 
