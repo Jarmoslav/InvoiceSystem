@@ -15,6 +15,7 @@ import static api.domain.Invoice.Builder.anInvoice;
 /*
 * Is responsible for handling the terminal gui.
 * Speaks with the backend through the facades.
+* This is a naive approch...
 * TODO: Split File into InvoiceClient and InvoiceAccount classes.
 * TODO: Find libary for better terminal handling
 * TODO: Support Payment of for invoices.
