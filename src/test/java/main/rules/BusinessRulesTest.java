@@ -1,7 +1,7 @@
 package main.rules;
 
 import api.domain.Invoice;
-import client.client.rules.BusinessRules;
+import client.rules.BusinessRules;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -10,9 +10,7 @@ import static main.testdata.InvoiceBuilder.anInvoice;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by simjar on 2017-04-14.
- */
+
 public class BusinessRulesTest {
 
     @Test

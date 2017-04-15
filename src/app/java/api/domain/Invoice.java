@@ -1,7 +1,7 @@
 package api.domain;
 
 
-import client.client.rules.BusinessRules;
+import client.rules.BusinessRules;
 
 import java.time.LocalDate;
 import java.util.Set;

@@ -1,20 +1,27 @@
-package client.client;
+package client;
 
 
 import api.domain.*;
-import client.client.facade.InvoiceFacade;
-import client.client.facade.InvoiceAccountFacade;
-import client.client.facade.InvoiceAccountFacadeImpl;
-import client.client.facade.InvoiceFacadeImpl;
+import client.facade.InvoiceFacade;
+import client.facade.InvoiceAccountFacade;
+import client.facade.InvoiceAccountFacadeImpl;
+import client.facade.InvoiceFacadeImpl;
 
 import java.time.LocalDate;
 import java.util.*;
 
 import static api.domain.Invoice.Builder.anInvoice;
 
+/*
+* Is responsible for handling the terminal gui.
+* Speaks with the backend through the facades.
+* TODO: Split File into InvoiceClient and InvoiceAccount classes.
+* TODO: Find libary for better terminal handling
+* TODO: Support Payment of for invoices.
+* */
 public class InvoiceSystemClient {
 
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
     private final InvoiceAccountFacade invoiceAccountFacade;
     private final InvoiceFacade invoiceFacade;
 
@@ -23,7 +30,7 @@ public class InvoiceSystemClient {
         this.invoiceFacade = new InvoiceFacadeImpl();
     }
 
-    //for testing
+    //used for testing
     public InvoiceSystemClient(InvoiceAccountFacade invoiceAccountFacade, InvoiceFacade invoiceFacade) {
         this.invoiceAccountFacade = invoiceAccountFacade;
         this.invoiceFacade = invoiceFacade;
@@ -37,6 +44,7 @@ public class InvoiceSystemClient {
 
     private void mainGui(){
         System.out.println("--------MAIN SCREEN-----------");
+        System.out.println("");
         System.out.println(" press digit + enter to choose");
         System.out.println("1: Invoice Account");
         System.out.println("2: Invoice");
@@ -56,7 +64,6 @@ public class InvoiceSystemClient {
             }
             else{
                 System.out.println("Unknown number, press any key to continue " + nr);
-
             }
         } catch (InputMismatchException  e){
             System.out.println("wrong input.. redirecting to main");
@@ -67,7 +74,7 @@ public class InvoiceSystemClient {
 
     private void handleInvoice() {
         System.out.println("--------------------------HANDLE INVOICE----------------------");
-        System.out.println("---------------Chooose by pressing digit and press enter----------------------");
+        System.out.println("");
         System.out.println("1: create invoice");
         System.out.println("2: get invoice");
         System.out.println("3: modify invoice");

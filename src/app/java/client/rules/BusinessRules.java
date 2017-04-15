@@ -1,4 +1,4 @@
-package client.client.rules;
+package client.rules;
 
 import api.domain.Invoice;
 

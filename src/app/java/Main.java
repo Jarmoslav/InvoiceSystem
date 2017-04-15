@@ -1,6 +1,4 @@
-package client;
-
-import client.client.InvoiceSystemClient;
+import client.InvoiceSystemClient;
 
 
 public class Main {

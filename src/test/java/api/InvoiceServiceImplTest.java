@@ -11,6 +11,7 @@ import static main.testdata.InvoiceBuilder.anInvoice;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 
 public class InvoiceServiceImplTest {
@@ -25,7 +26,7 @@ public class InvoiceServiceImplTest {
     }
 
     @Test
-    public void createInvoice() throws Exception {
+    public void createInvoice() {
         Invoice invoice = anInvoice().build();
 
         invoiceServiceImpl.createInvoice(invoice);
@@ -34,9 +35,9 @@ public class InvoiceServiceImplTest {
     }
 
     @Test
-    public void getInvoice() throws Exception {
+    public void getInvoice() {
         Invoice invoice = anInvoice().build();
-        Mockito.when(invoiceRepositoryMock.getInvoice(invoice.getInvoiceId())).thenReturn(invoice);
+        when(invoiceRepositoryMock.getInvoice(invoice.getInvoiceId())).thenReturn(invoice);
 
         Invoice invoice1 = invoiceServiceImpl.getInvoice(invoice.getInvoiceId());
 

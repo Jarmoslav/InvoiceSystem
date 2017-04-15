@@ -1,7 +1,7 @@
 package api;
 
 import api.service.InvoiceAccountServiceImpl;
-import client.client.facade.InvoiceAccountFacade;
+import client.facade.InvoiceAccountFacade;
 import api.domain.InvoiceAccount;
 import api.domain.InvoiceAccountId;
 import repository.InvoiceAccountRepository;

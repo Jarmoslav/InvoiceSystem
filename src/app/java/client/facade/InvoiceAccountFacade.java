@@ -1,4 +1,4 @@
-package client.client.facade;
+package client.facade;
 
 
 import api.domain.InvoiceAccount;

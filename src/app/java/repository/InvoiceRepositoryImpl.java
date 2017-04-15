@@ -33,9 +33,13 @@ public class InvoiceRepositoryImpl implements InvoiceRepository {
     @Override
     public Set<Invoice> getInvoices(InvoiceAccountId id) {
         return inMemoryRepository.entrySet().stream()
-                .filter(invoiceIdInvoiceEntry -> invoiceIdInvoiceEntry.getValue().getInvoiceAccountId().equals(id))
+                .filter(entry->isInvoiceAccount(entry,id))
                 .map(map->map.getValue())
                 .collect(Collectors.toSet());
+    }
+
+    private boolean isInvoiceAccount(Map.Entry<InvoiceId, Invoice> entry, InvoiceAccountId id) {
+        return entry.getValue().getInvoiceAccountId().equals(id);
     }
 
     @Override

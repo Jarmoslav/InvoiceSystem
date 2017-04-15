@@ -3,13 +3,15 @@ package main.facade;
 import api.domain.InvoiceAccount;
 import api.domain.InvoiceAccountId;
 import api.service.InvoiceAccountService;
-import client.client.facade.InvoiceAccountFacadeImpl;
+import client.facade.InvoiceAccountFacadeImpl;
 import main.testdata.InvoiceAccountBuilder;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+import static main.testdata.InvoiceAccountBuilder.anInvoiceAccount;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 
 public class InvoiceAccountFacadeImplTest {
@@ -28,18 +30,18 @@ public class InvoiceAccountFacadeImplTest {
    
     @Test
     public void createInvoiceAccount() {
-        InvoiceAccount invoiceAccount = InvoiceAccountBuilder.anInvoiceAccount().build();
+        InvoiceAccount invoiceAccount = anInvoiceAccount().build();
 
         invoiceAccountFacadeImpl.createInvoiceAccount(invoiceAccount);
 
-        Mockito.verify(invoiceAccountServiceMock).createInvoiceAccount(invoiceAccount);
+        verify(invoiceAccountServiceMock).createInvoiceAccount(invoiceAccount);
     }
 
     @Test
     public void getInvoiceAccount() {
         invoiceAccountFacadeImpl.getInvoiceAccount(INVOICE_ACCOUNT_ID);
 
-        Mockito.verify(invoiceAccountServiceMock).getInvoiceAccount(INVOICE_ACCOUNT_ID);
+        verify(invoiceAccountServiceMock).getInvoiceAccount(INVOICE_ACCOUNT_ID);
     }
 
 }

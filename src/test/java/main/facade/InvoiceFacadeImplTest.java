@@ -4,7 +4,7 @@ import api.domain.Invoice;
 import api.domain.InvoiceAccountId;
 import api.domain.InvoiceId;
 import api.service.InvoiceService;
-import client.client.facade.InvoiceFacadeImpl;
+import client.facade.InvoiceFacadeImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

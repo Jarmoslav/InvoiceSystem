@@ -12,6 +12,7 @@ import java.util.Set;
 import static main.testdata.InvoiceBuilder.anInvoice;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.*;
 
 
@@ -25,7 +26,7 @@ public class InvoiceRepositoryImplTest {
     }
 
     @Test
-    public void createInvoice() throws Exception {
+    public void createInvoice() {
         Invoice invoice = anInvoice().build();
         invoiceRepositoryImpl.createInvoice(invoice);
 
@@ -36,12 +37,12 @@ public class InvoiceRepositoryImplTest {
     }
 
     @Test
-    public void getInvoice() throws Exception {
+    public void getInvoice() {
         Invoice invoice = anInvoice().build();
 
         Invoice actual = invoiceRepositoryImpl.getInvoice(invoice.getInvoiceId());
 
-        assertThat(actual, Matchers.nullValue());
+        assertThat(actual, nullValue());
     }
 
     @Test
