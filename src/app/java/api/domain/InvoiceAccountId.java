@@ -10,6 +10,7 @@ public class InvoiceAccountId {
     }
 
     public static InvoiceAccountId valueOf(String id) {
+
         return new InvoiceAccountId(id);
     }
 
